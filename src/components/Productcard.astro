@@ -1,0 +1,30 @@
+---
+const {image} = Astro.props;
+const {alt} = Astro.props;
+const {itemlink} = Astro.props;
+const {itemname} = Astro.props;
+const {itemsize} = Astro.props;
+const {brandname} = Astro.props;
+---
+<article>
+    
+    <img src=`${image}` alt=`${alt}`>
+    <a href=`${itemlink}`>{itemname}</a>
+    <div class="brand">
+        {itemsize && <div class="itemsize"><p>{itemsize} </p></div>}<p>{brandname}</p>
+    </div>
+
+</article>
+<style>
+    article{var(--a-c-pagecol);}
+    p{color:var(--a-c-primary-neutral-green-100);}
+    .brand{display: flex;
+    flex-direction: row;
+padding: 0;}
+    .itemsize{background-color:var(--a-c-primary-neutral-green-100);
+        
+    aspect-ratio: 1/1;}
+    .itemsize > p{color:var(--a-c-pagecol);
+        transform{scale(90%)};
+    }
+</style>
