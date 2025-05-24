@@ -39,7 +39,7 @@
 
 /* Effect styles */
 --header-pressed:  0px 0px 4.400000095367432px rgba(135, 235, 85, 1);
---card--shadow:  -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
+--card-shadow:  -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
 --shadow-1:  0px 0px 1px rgba(33, 37, 41, 0.32), 0px 4px 6px rgba(33, 37, 41, 0.2);
 --shadow-2:  0px 0px 1px rgba(33, 37, 41, 0.08), 0px 2px 2px rgba(33, 37, 41, 0.06);
 

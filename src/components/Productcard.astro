@@ -1,30 +1,81 @@
 ---
-const {image} = Astro.props;
-const {alt} = Astro.props;
-const {itemlink} = Astro.props;
-const {itemname} = Astro.props;
-const {itemsize} = Astro.props;
-const {brandname} = Astro.props;
----
-<article>
-    
-    <img src=`${image}` alt=`${alt}`>
-    <a href=`${itemlink}`>{itemname}</a>
-    <div class="brand">
-        {itemsize && <div class="itemsize"><p>{itemsize} </p></div>}<p>{brandname}</p>
-    </div>
+const { image } = Astro.props;
+const { alt } = Astro.props;
+const { itemlink } = Astro.props;
+const { itemname } = Astro.props;
+const { itemsize } = Astro.props;
+const { brandname } = Astro.props;
+const { closetname } = Astro.props;
+const { closetlink } = Astro.props;
 
+---
+
+<article>
+  <a href=`${itemlink}`><img src=`${image}` alt=`${alt}` /></a>
+  <a href=`${itemlink}` class="itemname">{itemname}</a>
+  <div class="brand">
+    {itemsize && <p class="itemsize">{itemsize}</p>}<p>{itemsize && <>&nbsp;</>}{brandname}</p>
+  </div>
+  <a href=`${closetlink}` class="closetlink">{closetname}</a>
 </article>
 <style>
-    article{var(--a-c-pagecol);}
-    p{color:var(--a-c-primary-neutral-green-100);}
-    .brand{display: flex;
+  article {
+
+    background-color: var(--a-c-pagecol);
+    display: flex;
+    padding: 20px;
+    flex-direction: column;
+    gap: 0;
+    border-radius: 20px;
+    border: 1px solid var(--a-c-primary-neutral-green-100);
+    background: var(--a-c-pagecol;);
+    box-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
+  }
+  img {
+    flex-grow: 1;
+    border-radius: 15px;
+    border: 1px solid var(--a-c-primary-neutral-green-100);
+
+    box-shadow: 0px 4px 19.1px -9px rgba(0, 0, 0, 0.47);
+  }
+  p {
+    color: var(--a-c-primary-neutral-green-100);
+  }
+
+  .brand {
+    display: flex;
     flex-direction: row;
-padding: 0;}
-    .itemsize{background-color:var(--a-c-primary-neutral-green-100);
-        
-    aspect-ratio: 1/1;}
-    .itemsize > p{color:var(--a-c-pagecol);
-        transform{scale(90%)};
-    }
+  }
+  .itemsize {
+    padding: 2%;
+    border-radius: 4px;
+    background-color: var(--a-c-primary-neutral-green-100);
+    color: var(--a-c-pagecol);
+    margin: 0;
+    
+    align-self: center;
+    aspect-ratio: 1/1;
+  }
+
+  a.itemname{
+    text-decoration: none;
+    color: var(--a-c-primary-neutral-green-100);
+    transition: 0.3s;
+    font-weight: 700;
+    font-size: 120%;
+     margin-top: 5%;
+  }
+  a.closetlink{
+    font-family: "Inclusive Sans", sans-serif;
+    text-decoration: none;
+    color: var(--a-c-primary-neutral-green-100);
+    text-transform: uppercase;
+    
+
+  }
+  a.closetlink:hover,
+  a.itemname:hover{
+
+    color: var(--a-c-secondary-red-100);
+  }
 </style>

@@ -1,26 +1,34 @@
 ---
-import '../styles/global.css';
-import Layout from '../layouts/Layout.astro';
-import Productcard from '../components/Productcard.astro';
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Productcard from "../components/Productcard.astro";
 ---
-<Layout titel="Komponenter">
-    <main>
-        <h1>Stylesheet showcase (h1)</h1>
-        <h2>h2</h2>
-        <h3>h3</h3>
-        <p>p</p>
-        <a href="#">a</a>
-        <h2>Cards:</h2>
-        <div class="cardshowcase">
-            <Productcard image="https://c.tenor.com/7e7npF7hVpcAAAAC/tenor.gif" alt="catfish :DD" brandname="Placeholder" itemsize="XS"/>
 
-        </div>
-    </main>
+<Layout titel="Komponenter">
+  <main>
+    <h1>Stylesheet showcase (h1)</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+    <a href="#">a</a>
+    <h2>Cards:</h2>
+    <div class="cardshowcase">
+      <Productcard
+        image="https://c.tenor.com/7e7npF7hVpcAAAAC/tenor.gif"
+        alt="catfish :DD"
+        brandname="Placeholder"
+        itemsize="XS"
+        itemname="Catfishe :DD"
+        itemlink="#"
+        closetname="Atlantis"
+        closetlink="#"
+      />
+    </div>
+  </main>
 </Layout>
 <style>
-    .cardshowcase{
-        width: 100%;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr;
-    }
+  .cardshowcase {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
 </style>
