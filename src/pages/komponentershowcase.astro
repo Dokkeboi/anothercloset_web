@@ -2,6 +2,7 @@
 import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Productcard from "../components/Productcard.astro";
+import Infocard from "../components/Infocard.astro";
 ---
 
 <Layout titel="Komponenter">
@@ -23,18 +24,18 @@ import Productcard from "../components/Productcard.astro";
         closetname="Atlantis"
         closetlink="#"
       />
+      <Infocard cardtitle="Sample Text" cardsubtitle="Subtitle" cardtext="blablablablablablabla"/ cardcta="CTA" cardlink="#">
     </div>
-    <h2>CTA'er
-    </h2>
-          <a href="#" class="cta-small">Small</a>
-      <a href="#" class="cta-medium">Medium</a>
-      <a href="#" class="cta-large">Large</a>
-
+    <h2>CTA'er</h2>
+    <a href="#" class="cta-small">Small</a>
+    <a href="#" class="cta-medium">Medium</a>
+    <a href="#" class="cta-large">Large</a>
   </main>
 </Layout>
 <style>
   .cardshowcase {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    gap: 5px;
   }
 </style>
