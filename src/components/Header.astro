@@ -3,8 +3,11 @@
 ---
 
 <header>
+  <a href="index" class="logo"></a>
   <nav>
-    <a href="index" class="logo"></a>
+    <a href="" class="headerlink">FAQ</a>
+    <a href="" class="headerlink">Log ind</a>
+    <a href="" class="cta-small">Bliv medlem</a>
   </nav>
 </header>
 <style>
@@ -14,20 +17,22 @@
     left: 0;
     margin: 0;
     display: flex;
-    flex-direction: column;
     width: 100vw;
     position: fixed;
     border-style: solid;
     border-width: 0px 0px 2px;
     border-color: var(--a-c-primary-neutral-green-100);
+    height: var(--headerheight);
   }
   nav {
+    align-items: center;
     display: flex;
-        height: var(--headerheight);
-
-
+    justify-content: flex-end;
+    flex-grow: 1;
+    margin-right: 4vw;
+    gap: 7vw;
   }
-  a.logo{
+  a.logo {
     mask-image: url(../assets/logo/small.webp);
     mask-repeat: no-repeat;
     mask-position: center;
@@ -35,5 +40,29 @@
     height: 100%;
     aspect-ratio: 2/1;
     transform: scale(90%);
+    transition: background-color, 0.3s;
+  }
+  a.headerlink {
+    color: var(--a-c-primary-neutral-green-100);
+
+    text-decoration: none;
+    font-family: "Inclusive Sans", sans-serif;
+    font-weight: 500;
+    transition: color, 0.3s;
+  }
+
+  a.logo:hover {
+    background-color: var(--a-c-primary-green-100);
+  }
+  a.headerlink:hover {
+    color: var(--a-c-primary-green-100);
+  }
+
+  @media (min-width: 800px) {
+    a.logo {
+      mask-image: url(../assets/logo/large.webp);
+      aspect-ratio: 6/1;
+      transform: scale(80%) translateX(-10%);
+    }
   }
 </style>

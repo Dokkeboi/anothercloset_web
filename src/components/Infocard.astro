@@ -6,17 +6,25 @@ const { cardcta } = Astro.props;
 const { cardlink } = Astro.props;
 ---
 
-<article>
+<article data-aos="fade-left">
   {cardtitle && <p class="cardtitle">{cardtitle}</p>}
   {cardsubtitle && <p class="cardsubtitle">{cardsubtitle}</p>}
   {cardtext && <p>{cardtext}</p>}
-  {cardcta && <a href={cardlink} class="cta-medium">{cardcta}</a>}
+  {
+    cardcta && (
+      <a href={cardlink} class="cta-medium">
+        {cardcta}
+      </a>
+    )
+  }
 </article>
 <style>
   article {
+    padding: 5%;
+    box-sizing: border-box;
+    width: 100%;
     background-color: var(--a-c-pagecol);
     display: flex;
-    padding: 20px;
     flex-direction: column;
     justify-content: space-between;
     gap: 0;
@@ -25,6 +33,7 @@ const { cardlink } = Astro.props;
     background: var(--a-c-pagecol;);
     box-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
   }
+
   p.cardsubtitle {
     font-weight: 500;
   }

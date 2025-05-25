@@ -73,7 +73,8 @@ a {
   color: var(--a-c-secondary-red-100);
 }
 main {
-  margin-top: var(--headerheight);
+    margin:2%;
+  margin-top: calc(2% + var(--headerheight));
 }
 
 a.cta-small,
@@ -86,6 +87,8 @@ a.cta-large {
   border-radius: 20px;
   transition: 0.3s;
   text-align: center;
+    border: 1px solid var(--a-c-primary-green-100);
+
 }
 
 a.cta-small {
@@ -106,8 +109,9 @@ a.cta-large {
 a.cta-small:hover,
 a.cta-medium:hover,
 a.cta-large:hover {
+
   background-color: transparent;
-  border: 1px solid var(--a-c-primary-neutral-green-100);
+  border-color: var(--a-c-primary-neutral-green-100);
 }
 /*Mangler endu pressed states for CTA'er*/
 
@@ -115,4 +119,14 @@ body {
   margin: 0 !important;
   padding: 0;
   background-color: var(--a-c-pagecol);
+}
+
+header{
+    z-index: 2;
+}
+
+html{
+      overflow-x: hidden;
+
+
 }
