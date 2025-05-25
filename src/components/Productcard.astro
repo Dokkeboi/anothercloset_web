@@ -1,24 +1,35 @@
 ---
-const { image } = Astro.props;
-const { alt } = Astro.props;
-const { itemlink } = Astro.props;
-const { itemname } = Astro.props;
-const { itemsize } = Astro.props;
-const { brandname } = Astro.props;
-const { closetname } = Astro.props;
-const { closetlink } = Astro.props;
+const url = "https://lzmtfinlowhwlrztjvpr.supabase.co/rest/v1/items";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6bXRmaW5sb3dod2xyenRqdnByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MjMwMTksImV4cCI6MjA2MzM5OTAxOX0.7etoSeq9SdawJ3_h6GNE8OcltmXRj_92v4DWywE8myw";
+
+const options = { headers: { apikey: key } };
+
+const data: any[] = await fetch(url, options).then((res) => res.json());
 ---
 
-<article data-aos="fade-left">
-  <a href=`${itemlink}`><img src=`${image}` alt=`${alt}` /></a>
-  <a href=`${itemlink}` class="itemname">{itemname}</a>
-  <div class="brand">
-    {itemsize && <p class="itemsize">{itemsize}</p>}<p>
-      {itemsize && <>&nbsp;</>}{brandname}
-    </p>
-  </div>
-  <a href="${closetlink}`" class="closetlink">{closetname}</a>
-</article>
+{
+  data.map((item) => (
+    <article data-aos="fade-left">
+      <a href={item.itemlink}>
+        <img src={item.image} alt={item.alt} />
+      </a>
+      <a href={item.itemlink} class="itemname">
+        {item.itemname}
+      </a>
+      <div class="brand">
+        {item.itemsize && <p class="itemsize">{item.itemsize}</p>}
+        <p>
+          {item.itemsize && <>&nbsp;</>}
+          {item.brandname}
+        </p>
+      </div>
+      <a href="${closetlink}`" class="closetlink">
+        {item.closetname}
+      </a>
+    </article>
+  ))
+}
 <style>
   article {
     padding: 5%;
