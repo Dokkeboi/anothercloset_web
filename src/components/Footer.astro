@@ -1,0 +1,47 @@
+---
+
+---
+
+<footer>
+  <div class="left">
+    <p><b>Mere info:</b></p>
+    <a href="#">Sådan fungerer another closet</a>
+    <a href="#">Vores mission</a>
+    <a href="#">FAQ</a>
+    <p><b>Det med småt:</b></p>
+    <a href="#">Handelsbetingelser</a>
+    <a href="#">Cookies - og privatlivspolitik</a>
+    <a href="#">FAQ</a>
+    <p><b>Kontakt:</b></p>
+    <a href="mailto:hej@anothercloset.dk">hej@anothercloset.dk</a>
+    <p><b>Adresse:</b></p>
+    <a href="#">Tønbergsvejl 104 - 4000 Roskilde</a>
+  </div>
+  <div class="right">
+    <a href="https://www.facebook.com/anotherclosetdanmark/" class="some-icon fb">
+      
+      
+    </a>
+  </div>
+</footer>
+<style>
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--a-c-primary-green-100);
+    padding: 2%;
+    box-sizing: border-box;
+  }
+  footer > div {
+    display: flex;
+    flex-direction: column;
+  }
+  footer a,
+  footer p {
+    color: var(--a-c-pagecol);
+  }
+  a.some-icon{
+    width: 5vw;
+    aspect-ratio: 1/1;
+  }
+</style>
