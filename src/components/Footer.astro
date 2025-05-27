@@ -18,12 +18,14 @@
     <a href="#">Tønbergsvejl 104 - 4000 Roskilde</a>
   </div>
   <div class="right">
-    <a href="https://www.facebook.com/anotherclosetdanmark/" class="some-icon fb">
-      
-      
-    </a>
+    <a href="" class="some-logo insta"></a>
+    <a href="" class="some-logo fb"></a>
+
+    <a href="" class="footerlogo"></a>
+    <p class="copyright">© 2023 Another Closet</p>
   </div>
 </footer>
+
 <style>
   footer {
     display: grid;
@@ -36,12 +38,45 @@
     display: flex;
     flex-direction: column;
   }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
   footer a,
   footer p {
     color: var(--a-c-pagecol);
   }
-  a.some-icon{
-    width: 5vw;
-    aspect-ratio: 1/1;
+
+  p.copyright {
+    font-family: "Inclusive Sans", sans-serif;
   }
+  a.some-logo {
+    background-color: var(--a-c-pagecol);
+
+    width: 13vh;
+    aspect-ratio: 1/1;
+    transform: scale(80%);
+  }
+
+  a.footerlogo {
+    mask-image: url(../assets/logo/small.webp);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--a-c-pagecol);
+    height: 10vh;
+    aspect-ratio: 2/1;
+  }
+
+  a.insta {
+    mask-image: url(../assets/some-logos/Instagram_Glyph_Black.svg);
+    mask-size: contain;
+  }
+  a.fb {
+    mask-image: url(../assets/some-logos/Facebook_Logo_Secondary.png);
+    mask-size: contain;
+  }
+
 </style>
