@@ -21,7 +21,7 @@
     <a href="" class="some-logo insta"></a>
     <a href="" class="some-logo fb"></a>
 
-    <a href="" class="footerlogo"></a>
+    <a href="/" class="footerlogo"></a>
     <p class="copyright">© 2023 Another Closet</p>
   </div>
 </footer>
@@ -57,7 +57,7 @@
 
     width: 13vh;
     aspect-ratio: 1/1;
-    transform: scale(80%);
+    transform: scale(60%);
   }
 
   a.footerlogo {
@@ -67,6 +67,7 @@
     mask-position: center;
     background-color: var(--a-c-pagecol);
     height: 10vh;
+    transform: scale(80%);
     aspect-ratio: 2/1;
   }
 
@@ -78,5 +79,16 @@
     mask-image: url(../assets/some-logos/Facebook_Logo_Secondary.png);
     mask-size: contain;
   }
+  @media (min-width: 800px) {
+    a.footerlogo {
+      transition: scale(100%);
+    }
+    a.some-logo {
+      background-color: var(--a-c-pagecol);
 
+      width: 13vh;
+      aspect-ratio: 1/1;
+      transform: scale(80%);
+    }
+  }
 </style>
