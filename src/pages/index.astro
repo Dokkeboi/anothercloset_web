@@ -1,21 +1,13 @@
 ---
-import 'aos/dist/aos.css';
+import Layout from "../layouts/Layout.astro"
+
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
-  </head>
-  <body>
+  <Layout titel="index">
+    <main>
     <h1 data-aos="fade-in" data-aos-delay="300">Astro</h1>
     <!-- AOS Installeret! For dokumentation, se: https://michalsnik.github.io/aos/ -->
-    <script>
-      import AOS from "aos";
-      AOS.init();
-    </script>
-  </body>
-</html>
+     <p>test</p>
+    <a href="komponentershowcase">Komponenter - Magnus</a></main>
+    </Layout>
+

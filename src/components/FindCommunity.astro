@@ -1,0 +1,128 @@
+<div class="hero_section">
+  <h1>Find dit tøjfællesskab!</h1>
+  <div class="hvor-bor-du">
+    <p class="subtitle1">
+      Hvor bor du?<p>
+        <div class="closet_container">
+          <div class="closet_row row1">
+            <a class="item1" href="">AAU København</a>
+            <a class="item2" href="">Frederecia</a>
+            <a class="item3" href="">KEA</a>
+            <a class="item4" href="">Lyngby</a>
+          </div>
+          <div class="closet_row row2">
+            <a class="item5" href="">Nørrebro</a>
+            <a class="item6" href="">Ribe</a>
+            <a class="item7" href="">Ringkøbing</a>
+            <a class="item8" href="">Roskilde</a>
+          </div>
+          <div class="closet_row row3">
+            <a class="item9" href="">Tøj til leje</a>
+          </div>
+        </div>
+      </p>
+      <div class="ikke-paa-listen">
+        <p class="subtitle1">Er din by ikke på listen?</p>
+        <p class="body1_regular">
+          Vi har fart på og åbner konstant nye tøjfællesskaber, så endnu flere
+          kvinder kan dele tøj i stedet for at købe nyt.
+        </p>
+        <span></span>
+        <p class="body1_regular">
+          Skriv dig på ventelisten, og vær den første til at få besked, når vi
+          åbner i nærheden af dig, eller hør hvordan, du starter dit eget
+          tøjfællesskab.
+        </p>
+      </div>
+    </p>
+
+    <style>
+      .subtitle1 {
+        margin-bottom: 20px;
+      }
+      span {
+        margin: 20px;
+      }
+
+      .hero_section {
+        flex-shrink: 0;
+      }
+
+      .hero_section h1 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        flex-shrink: 0;
+        margin-bottom: 80px;
+        margin-top: 80px;
+      }
+
+      .hero_section .hvor-bor-du .subtitle1 {
+        text-align: center;
+      }
+
+      .hero_section .hvor-bor-du .closet_container {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+        place-items: center;
+      }
+
+      .hero_section .hvor-bor-du .closet_container .closet_row {
+        display: grid;
+        grid-template-areas: ". . . .";
+        width: 66.5rem;
+        height: 6.5625rem;
+        padding: 0.625rem;
+        justify-content: center;
+        align-items: center;
+        gap: 0.625rem;
+      }
+
+      .hero_section .hvor-bor-du .closet_container .closet_row a {
+        display: flex;
+        padding: 0.75vh 1.5vh;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        border-radius: 1.25rem;
+        background: var(--AC-Primary-Green-20, rgba(108, 185, 70, 0.2));
+        text-align: center;
+      }
+
+      .hero_section .hvor-bor-du .closet_container .closet_row a:hover {
+        animation-name: boxHover;
+        animation-duration: 400ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+      }
+
+      @keyframes boxHover {
+        0% {
+          background-color: var(--AC-Primary-Green-20, rgba(108, 185, 70, 0.2));
+          border: 1px solid
+            var(--AC-Primary-Neutral-Green-20, rgba(45, 77, 29, 0));
+        }
+        100% {
+          background-color: var(--AC-Primary-Green-20, rgba(108, 185, 70, 0));
+          border: 1px solid
+            var(--AC-Primary-Neutral-Green-20, rgba(45, 77, 29, 0.2));
+        }
+      }
+
+      .hero_section .ikke-paa-listen .subtitle1 {
+        text-align: center;
+      }
+
+      .hero_section .ikke-paa-listen {
+        display: flex;
+        flex-direction: column;
+        justify-self: center;
+      }
+
+      .hero_section .ikke-paa-listen p {
+        text-align: center;
+      }
+    </style>
+  </div>
+</div>

@@ -1,0 +1,66 @@
+---
+import "../styles/global.css";
+import Layout from "../layouts/Layout.astro";
+import Productcard from "../components/Productcard.astro";
+import Infocard from "../components/Infocard.astro";
+---
+
+<Layout titel="Komponenter">
+  <main>
+    <h1 data-aos="fade-right">Stylesheet showcase (h1)</h1>
+    <h2>h2</h2>
+    <h3>h3</h3>
+    <p>p</p>
+    <a href="#">a</a>
+    <h2>Cards:</h2>
+    <div class="cardshowcase">
+      <Productcard
+        image="https://c.tenor.com/7e7npF7hVpcAAAAC/tenor.gif"
+        alt="catfish :DD"
+        brandname="Placeholder"
+        itemsize="XS"
+        itemname="Catfishe :DD"
+        itemlink="#"
+        closetname="Atlantis"
+        closetlink="#"
+      />
+      <Infocard
+        cardtitle="Sample Text"
+        cardsubtitle="Subtitle"
+        cardtext="blablablablablablabla"
+        cardcta="CTA"
+        cardlink="#"
+      />
+    </div>
+    <h2>CTA'er</h2>
+
+    <div class="ctas" data-aos="fade-right">
+      <a href="#" class="cta-small">Small</a>
+      <a href="#" class="cta-medium">Medium</a>
+      <a href="#" class="cta-large">Large</a>
+    </div>
+  </main>
+  <style>
+    .cardshowcase {
+      width: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5px;
+    }
+    .ctas {
+      width: 70%;
+      margin-left: 15%;
+      flex-direction: column;
+      display: flex;
+    }
+    @media (min-width: 800px) {
+      .cardshowcase {
+        grid-template-columns: 1fr 1fr 1fr;
+      }
+      .ctas {
+        width: 50%;
+        margin-left: 25%;
+      }
+    }
+  </style>
+</Layout>

@@ -1,0 +1,92 @@
+---
+const url = "https://lzmtfinlowhwlrztjvpr.supabase.co/rest/v1/items";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6bXRmaW5sb3dod2xyenRqdnByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MjMwMTksImV4cCI6MjA2MzM5OTAxOX0.7etoSeq9SdawJ3_h6GNE8OcltmXRj_92v4DWywE8myw";
+
+const options = { headers: { apikey: key } };
+
+const data: any[] = await fetch(url, options).then((res) => res.json());
+---
+
+{
+  data.map((item) => (
+    <article data-aos="fade-left">
+      <a href={item.itemlink}>
+        <img src={item.image} alt={item.alt} />
+      </a>
+      <a href={item.itemlink} class="itemname">
+        {item.itemname}
+      </a>
+      <div class="brand">
+        {item.itemsize && <p class="itemsize">{item.itemsize}</p>}
+        <p>
+          {item.itemsize && <>&nbsp;</>}
+          {item.brandname}
+        </p>
+      </div>
+      <a href="${closetlink}`" class="closetlink">
+        {item.closetname}
+      </a>
+    </article>
+  ))
+}
+<style>
+  article {
+    padding: 5%;
+    box-sizing: border-box;
+    width: 100%;
+
+    background-color: var(--a-c-pagecol);
+    flex-direction: column;
+    gap: 0;
+    border-radius: 20px;
+    border: 1px solid var(--a-c-primary-neutral-green-100);
+    background: var(--a-c-pagecol;);
+    box-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
+  }
+
+  img {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid var(--a-c-primary-neutral-green-100);
+
+    box-shadow: 0px 4px 19.1px -9px rgba(0, 0, 0, 0.47);
+  }
+  p {
+    color: var(--a-c-primary-neutral-green-100);
+  }
+
+  .brand {
+    display: flex;
+    flex-direction: row;
+  }
+  .itemsize {
+    padding: 2%;
+    border-radius: 4px;
+    background-color: var(--a-c-primary-neutral-green-100);
+    color: var(--a-c-pagecol);
+    margin: 0;
+
+    align-self: center;
+    aspect-ratio: 1/1;
+  }
+
+  a.itemname {
+    text-decoration: none;
+    color: var(--a-c-primary-neutral-green-100);
+    transition: 0.3s;
+    font-weight: 700;
+    font-size: 120%;
+    margin-top: 5%;
+  }
+  a.closetlink {
+    font-family: "Inclusive Sans", sans-serif;
+    text-decoration: none;
+    color: var(--a-c-primary-neutral-green-100);
+    text-transform: uppercase;
+  }
+  a.closetlink:hover,
+  a.itemname:hover {
+    color: var(--a-c-secondary-red-100);
+  }
+</style>

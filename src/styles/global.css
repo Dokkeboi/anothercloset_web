@@ -1,0 +1,196 @@
+/* Designsystem: */
+:root {
+  /* Color styles */
+  --a-c-gray-gray-01: rgba(105, 105, 105, 1);
+  --a-c-gray-gray-02: rgba(85, 85, 85, 1);
+  --a-c-gray-gray-03: rgba(65, 65, 65, 1);
+  --a-c-gray-gray-04: rgba(45, 45, 45, 1);
+  --a-c-gray-gray-05: rgba(25, 25, 25, 1);
+  --a-c-white-white-01: rgba(245, 245, 245, 1);
+  --a-c-white-white-02: rgba(225, 225, 225, 1);
+  --a-c-white-white-03: rgba(205, 205, 205, 1);
+  --a-c-white-white-04: rgba(185, 185, 185, 1);
+  --a-c-white-white-05: rgba(165, 165, 165, 1);
+  --a-c-black-black-100: rgba(2, 6, 1, 1);
+  --a-c-black-black-80: rgba(2, 6, 1, 0.800000011920929);
+  --a-c-black-black-60: rgba(2, 6, 1, 0.6000000238418579);
+  --a-c-black-black-40: rgba(2, 6, 1, 0.5);
+  --a-c-black-black-20: rgba(2, 6, 1, 0.20000000298023224);
+  --a-c-primary-green-100: rgba(108, 185, 70, 1);
+  --a-c-primary-green-80: rgba(108, 185, 70, 0.800000011920929);
+  --a-c-primary-green-60: rgba(108, 185, 70, 0.6000000238418579);
+  --a-c-primary-green-40: rgba(108, 185, 70, 0.4000000059604645);
+  --a-c-primary-green-20: rgba(108, 185, 70, 0.20000000298023224);
+  --a-c-primary-green-10: rgba(108, 185, 70, 0.10000000149011612);
+  --a-c-primary-neutral-green-100: rgba(45, 77, 29, 1);
+  --a-c-primary-neutral-green-80: rgba(45, 77, 29, 0.800000011920929);
+  --a-c-primary-neutral-green-60: rgba(45, 77, 29, 0.6000000238418579);
+  --a-c-primary-neutral-green-40: rgba(45, 77, 29, 0.4000000059604645);
+  --a-c-primary-neutral-green-20: rgba(45, 77, 29, 0.20000000298023224);
+  --a-c-primary-neutral-white: rgba(245, 245, 245, 1);
+  --a-c-primary-neutral-green--black: rgba(9, 25, 2, 1);
+  --a-c-secondary-red-100: rgba(248, 67, 0, 1);
+  --a-c-secondary-red-80: rgba(248, 67, 0, 0.800000011920929);
+  --a-c-secondary-red-60: rgba(248, 67, 0, 0.6000000238418579);
+  --a-c-secondary-red-40: rgba(248, 67, 0, 0.4000000059604645);
+  --a-c-secondary-red-20: rgba(248, 67, 0, 0.20000000298023224);
+  --a-c-pagecol: #fff8eb;
+
+  /* Effect styles */
+  --header-pressed: 0px 0px 4.400000095367432px rgba(135, 235, 85, 1);
+  --card-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
+  --shadow-1:
+    0px 0px 1px rgba(33, 37, 41, 0.32), 0px 4px 6px rgba(33, 37, 41, 0.2);
+  --shadow-2:
+    0px 0px 1px rgba(33, 37, 41, 0.08), 0px 2px 2px rgba(33, 37, 41, 0.06);
+
+  --headerheight: 12vh;
+}
+
+/*Text-styles:*/
+* {
+}
+h1 {
+  font-family: "Lexend", sans-serif;
+  font-size: 3.75rem;
+  text-align: center;
+  font-weight: 700;
+  font-style: normal;
+  color: var(--a-c-primary-neutral-green-100);
+  line-height: 4.5rem;
+  letter-spacing: 0.02813rem;
+}
+h2 {
+  font-family: "Lexend", sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+  font-style: normal;
+}
+h3 {
+  font-family: "Lexend", sans-serif;
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-style: normal;
+}
+
+.subtitle1 {
+  font-family: "Lexend", sans-serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.subtitle2 {
+  font-family: "Lexend", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+}
+
+.body1_semibold {
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.body1_regular {
+  font-family: Lexend;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.body2_semibold {
+  font-family: Lexend;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.body2_regular {
+  font-family: "Inclusive Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
+p,
+a {
+  font-weight: 400;
+}
+a {
+  color: var(--AC-Black-Black-80, rgba(2, 6, 1, 0.8));
+  font-family: "Lexend", sans-serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-decoration: none;
+}
+main {
+  margin: 2%;
+  margin-top: calc(2% + var(--headerheight));
+}
+
+a.cta-small,
+a.cta-medium,
+a.cta-large {
+  background-color: var(--a-c-primary-green-100);
+  color: var(--a-c-black-black-80);
+  text-decoration: none;
+  font-family: "Inclusive Sans", sans-serif;
+  border-radius: 20px;
+  transition: 0.3s;
+  text-align: center;
+  border: 1px solid var(--a-c-primary-green-100);
+}
+
+a.cta-small {
+  padding: 0.8%;
+  margin: 0.8%;
+}
+
+a.cta-medium {
+  padding: 1.4%;
+  margin: 1.4%;
+}
+
+a.cta-large {
+  padding: 1.9%;
+  margin: 1.9%;
+}
+
+a.cta-small:hover,
+a.cta-medium:hover,
+a.cta-large:hover {
+  background-color: transparent;
+  border-color: var(--a-c-primary-neutral-green-100);
+}
+/*Mangler endu pressed states for CTA'er*/
+
+body {
+  margin: 0 !important;
+  padding: 0;
+  background-color: var(--a-c-pagecol);
+}
+
+header {
+  z-index: 2;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
