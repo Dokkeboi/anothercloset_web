@@ -48,7 +48,8 @@
 }
 
 /*Text-styles:*/
-
+* {
+}
 h1 {
   font-family: "Lexend", sans-serif;
   font-size: 3.75rem;
@@ -125,6 +126,15 @@ p,
 a {
   font-weight: 400;
 }
+a {
+  color: var(--AC-Black-Black-80, rgba(2, 6, 1, 0.8));
+  font-family: "Lexend", sans-serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+  text-decoration: none;
+}
 main {
   margin: 2%;
   margin-top: calc(2% + var(--headerheight));
@@ -134,6 +144,7 @@ a.cta-small,
 a.cta-medium,
 a.cta-large {
   background-color: var(--a-c-primary-green-100);
+  color: var(--a-c-black-black-80);
   text-decoration: none;
   font-family: "Inclusive Sans", sans-serif;
   border-radius: 20px;

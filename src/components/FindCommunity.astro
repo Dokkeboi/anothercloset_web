@@ -5,19 +5,19 @@
       Hvor bor du?<p>
         <div class="closet_container">
           <div class="closet_row">
-            <a class="subtitle1" class="" href="">AAU København</a>
-            <a class="subtitle1" href="">Frederecia</a>
-            <a class="subtitle1" href="">KEA</a>
-            <a class="subtitle1" href="">Lyngby</a>
+            <a class="" href="">AAU København</a>
+            <a href="">Frederecia</a>
+            <a href="">KEA</a>
+            <a href="">Lyngby</a>
           </div>
           <div class="closet_row">
-            <a class="subtitle1" href="">Nørrebro</a>
-            <a class="subtitle1" href="">Ribe</a>
-            <a class="subtitle1" href="">Ringkøbing</a>
-            <a class="subtitle1" href="">Roskilde</a>
+            <a href="">Nørrebro</a>
+            <a href="">Ribe</a>
+            <a href="">Ringkøbing</a>
+            <a href="">Roskilde</a>
           </div>
           <div class="closet_row">
-            <a class="subtitle1" href="">Tøj til leje</a>
+            <a href="">Tøj til leje</a>
           </div>
         </div>
       </p>
@@ -37,6 +37,9 @@
     </p>
 
     <style>
+      .subtitle1 {
+        margin-bottom: 20px;
+      }
       span {
         margin: 20px;
       }
@@ -50,6 +53,8 @@
         flex-direction: column;
         justify-content: center;
         flex-shrink: 0;
+        margin-bottom: 80px;
+        margin-top: 80px;
       }
 
       .hero_section .hvor-bor-du .subtitle1 {
@@ -76,14 +81,33 @@
 
       .hero_section .hvor-bor-du .closet_container .closet_row a {
         display: flex;
-        padding: 0.75rem 1.5rem;
+        padding: 0.75vh 1.5vh;
         justify-content: center;
         align-items: center;
         align-self: stretch;
         border-radius: 1.25rem;
         background: var(--AC-Primary-Green-20, rgba(108, 185, 70, 0.2));
-        color: var(--AC-Black-Black-80, rgba(2, 6, 1, 0.8));
         text-align: center;
+      }
+
+      .hero_section .hvor-bor-du .closet_container .closet_row a:hover {
+        animation-name: boxHover;
+        animation-duration: 400ms;
+        animation-iteration-count: 1;
+        animation-fill-mode: both;
+      }
+
+      @keyframes boxHover {
+        0% {
+          background-color: var(--AC-Primary-Green-20, rgba(108, 185, 70, 0.2));
+          border: 1px solid
+            var(--AC-Primary-Neutral-Green-20, rgba(45, 77, 29, 0));
+        }
+        100% {
+          background-color: var(--AC-Primary-Green-20, rgba(108, 185, 70, 0));
+          border: 1px solid
+            var(--AC-Primary-Neutral-Green-20, rgba(45, 77, 29, 0.2));
+        }
       }
 
       .hero_section .ikke-paa-listen .subtitle1 {
