@@ -3,6 +3,7 @@ import "../styles/global.css";
 import Layout from "../layouts/Layout.astro";
 import Productcard from "../components/Productcard.astro";
 import Infocard from "../components/Infocard.astro";
+import Memberfavsection from "../components/Memberfavsection.astro";
 ---
 
 <Layout titel="Komponenter">
@@ -39,6 +40,7 @@ import Infocard from "../components/Infocard.astro";
       <a href="#" class="cta-medium">Medium</a>
       <a href="#" class="cta-large">Large</a>
     </div>
+    <Memberfavsection sectiontitle="Medlemmers favoritter" />
   </main>
   <style>
     .cardshowcase {
@@ -55,7 +57,7 @@ import Infocard from "../components/Infocard.astro";
     }
     @media (min-width: 800px) {
       .cardshowcase {
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
       }
       .ctas {
         width: 50%;

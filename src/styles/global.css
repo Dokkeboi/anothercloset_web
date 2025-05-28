@@ -45,6 +45,7 @@
     0px 0px 1px rgba(33, 37, 41, 0.08), 0px 2px 2px rgba(33, 37, 41, 0.06);
 
   --headerheight: 12vh;
+  --headerheight-mobile: 8vh;
 }
 
 /*Text-styles:*/
@@ -136,8 +137,8 @@ a {
   text-decoration: none;
 }
 main {
-  margin: 2%;
-  margin-top: calc(2% + var(--headerheight));
+  margin: 4%;
+  margin-top: calc(4% + var(--headerheight-mobile));
 }
 
 a.cta-small,
@@ -190,7 +191,14 @@ html {
   overflow-x: hidden;
 }
 
+
 * {
   margin: 0;
   padding: 0;
+  
+@media (min-width: 800px) {
+  main {
+    margin: 10%;
+    margin-top: calc(10% + var(--headerheight));
+  }
 }
