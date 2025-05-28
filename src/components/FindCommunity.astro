@@ -4,20 +4,20 @@
     <p class="subtitle1">
       Hvor bor du?<p>
         <div class="closet_container">
-          <div class="closet_row">
-            <a class="" href="">AAU København</a>
-            <a href="">Frederecia</a>
-            <a href="">KEA</a>
-            <a href="">Lyngby</a>
+          <div class="closet_row row1">
+            <a class="item1" href="">AAU København</a>
+            <a class="item2" href="">Frederecia</a>
+            <a class="item3" href="">KEA</a>
+            <a class="item4" href="">Lyngby</a>
           </div>
-          <div class="closet_row">
-            <a href="">Nørrebro</a>
-            <a href="">Ribe</a>
-            <a href="">Ringkøbing</a>
-            <a href="">Roskilde</a>
+          <div class="closet_row row2">
+            <a class="item5" href="">Nørrebro</a>
+            <a class="item6" href="">Ribe</a>
+            <a class="item7" href="">Ringkøbing</a>
+            <a class="item8" href="">Roskilde</a>
           </div>
-          <div class="closet_row">
-            <a href="">Tøj til leje</a>
+          <div class="closet_row row3">
+            <a class="item9" href="">Tøj til leje</a>
           </div>
         </div>
       </p>
@@ -69,14 +69,14 @@
       }
 
       .hero_section .hvor-bor-du .closet_container .closet_row {
-        display: flex;
+        display: grid;
+        grid-template-areas: ". . . .";
         width: 66.5rem;
         height: 6.5625rem;
         padding: 0.625rem;
         justify-content: center;
         align-items: center;
         gap: 0.625rem;
-        flex-shrink: 0;
       }
 
       .hero_section .hvor-bor-du .closet_container .closet_row a {
