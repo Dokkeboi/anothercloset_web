@@ -48,32 +48,85 @@
 }
 
 /*Text-styles:*/
-* {
-  font-family: "Lexend", sans-serif;
-}
+
 h1 {
-  font-size: 2.3rem;
+  font-family: "Lexend", sans-serif;
+  font-size: 3.75rem;
   text-align: center;
   font-weight: 700;
+  font-style: normal;
   color: var(--a-c-primary-neutral-green-100);
+  line-height: 4.5rem;
+  letter-spacing: 0.02813rem;
 }
 h2 {
-  font-size: 2rem;
+  font-family: "Lexend", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
+  line-height: 4rem;
+  font-style: normal;
 }
 h3 {
+  font-family: "Lexend", sans-serif;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 2.5rem;
+  line-height: 3rem;
+  font-style: normal;
 }
+
+.subtitle1 {
+  font-family: "Lexend", sans-serif;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.5rem;
+}
+
+.subtitle2 {
+  font-family: "Lexend", sans-serif;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+}
+
+.body1_semibold {
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.75rem;
+}
+.body1_regular {
+  font-family: Lexend;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.75rem;
+}
+.body2_semibold {
+  font-family: Lexend;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 1.5rem;
+}
+.body2_regular {
+  font-family: "Inclusive Sans";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5rem;
+}
+
 p,
 a {
   font-weight: 400;
 }
-a {
-  color: var(--a-c-secondary-red-100);
-}
 main {
-    margin:2%;
+  margin: 2%;
   margin-top: calc(2% + var(--headerheight));
 }
 
@@ -81,14 +134,12 @@ a.cta-small,
 a.cta-medium,
 a.cta-large {
   background-color: var(--a-c-primary-green-100);
-  color: var(--a-c-black-black-80);
   text-decoration: none;
   font-family: "Inclusive Sans", sans-serif;
   border-radius: 20px;
   transition: 0.3s;
   text-align: center;
-    border: 1px solid var(--a-c-primary-green-100);
-
+  border: 1px solid var(--a-c-primary-green-100);
 }
 
 a.cta-small {
@@ -109,7 +160,6 @@ a.cta-large {
 a.cta-small:hover,
 a.cta-medium:hover,
 a.cta-large:hover {
-
   background-color: transparent;
   border-color: var(--a-c-primary-neutral-green-100);
 }
@@ -121,12 +171,15 @@ body {
   background-color: var(--a-c-pagecol);
 }
 
-header{
-    z-index: 2;
+header {
+  z-index: 2;
 }
 
-html{
-      overflow-x: hidden;
+html {
+  overflow-x: hidden;
+}
 
-
+* {
+  margin: 0;
+  padding: 0;
 }
