@@ -18,9 +18,9 @@ const data: any[] = await fetch(url, options).then((res) => res.json());
         {item.itemname}
       </a>
       <div class="brand">
-        {item.itemsize && <p class="itemsize">{item.itemsize}</p>}
+        {item.size && <p class="itemsize">{item.size}</p>}
         <p>
-          {item.itemsize && <>&nbsp;</>}
+          {item.size && <>&nbsp;</>}
           {item.brandname}
         </p>
       </div>
@@ -33,10 +33,10 @@ const data: any[] = await fetch(url, options).then((res) => res.json());
 <style>
   article {
     padding: 5%;
-    box-sizing: border-box;
     width: 100%;
 
     background-color: var(--a-c-pagecol);
+    display: flex;
     flex-direction: column;
     gap: 0;
     border-radius: 20px;

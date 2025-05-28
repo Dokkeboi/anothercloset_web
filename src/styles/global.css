@@ -178,8 +178,6 @@ a.cta-large:hover {
 /*Mangler endu pressed states for CTA'er*/
 
 body {
-  margin: 0 !important;
-  padding: 0;
   background-color: var(--a-c-pagecol);
 }
 
@@ -191,11 +189,11 @@ html {
   overflow-x: hidden;
 }
 
-
 * {
   margin: 0;
   padding: 0;
-  
+}
+
 @media (min-width: 800px) {
   main {
     margin: 10%;
