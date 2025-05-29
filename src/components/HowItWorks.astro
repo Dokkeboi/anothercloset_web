@@ -22,26 +22,34 @@
     </svg>
     <div class="find step">
       <div class="stepgraphic">
-        <div class="stepicon"></div>
-        <p>1. Find dit tøjfællesskab.</p>
-      </div>
-    </div>
-    <div class="join step">
-      <div class="stepgraphic">
-        <div class="stepicon"></div>
+        <div class="stepicon">
+          <div class="material-symbols-rounded">map</div>
+        </div>
         <p>1. Find dit tøjfællesskab.</p>
       </div>
     </div>
     <div class="meet step">
       <div class="stepgraphic">
-        <div class="stepicon"></div>
-        <p>1. Find dit tøjfællesskab.</p>
+        <div class="stepicon">
+          <div class="material-symbols-rounded">star</div>
+        </div>
+        <p>3. Mød op!<br />Lån 3 stykker tøj.</p>
       </div>
     </div>
     <div class="return step">
       <div class="stepgraphic">
-        <div class="stepicon"></div>
-        <p>1. Find dit tøjfællesskab.</p>
+        <div class="stepicon">
+          <div class="material-symbols-rounded">recycling</div>
+        </div>
+        <p>4. En måned senere:<br />returner og lån nyt.</p>
+      </div>
+    </div>
+    <div class="join step">
+      <div class="stepgraphic">
+        <div class="stepicon">
+          <div class="material-symbols-rounded">home</div>
+        </div>
+        <p>2. Tilmeld dig en tøjsalon.</p>
       </div>
     </div>
   </div>
@@ -84,10 +92,19 @@
     font-size: 120%;
   }
   .stepicon {
+    width: 13rem;
     background-color: var(--a-c-primary-green-100);
     aspect-ratio: 1 / 1;
     border-radius: 50%;
     margin-bottom: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .material-symbols-rounded {
+    color: var(--a-c-primary-neutral-green-100);
+
+    font-size: 10rem;
   }
   .infinity-loop {
     transform: scaleY(80%);
@@ -103,6 +120,7 @@
     stroke-width: 40;
     vector-effect: non-scaling-stroke;
   }
+
   @media (min-width: 800px) {
   }
 </style>
