@@ -1,5 +1,5 @@
 ---
-
+const { linkcontext } = Astro.props;
 ---
 
 <footer>
@@ -21,7 +21,7 @@
     <a href="" class="some-logo insta"></a>
     <a href="" class="some-logo fb"></a>
 
-    <a href="/" class="footerlogo"></a>
+    <a href=`${linkcontext || "/"}` class="footerlogo"></a>
     <p class="copyright">© 2023 Another Closet</p>
   </div>
 </footer>

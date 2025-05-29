@@ -1,9 +1,9 @@
 ---
-
+const { linkcontext } = Astro.props;
 ---
 
 <header>
-  <a href="/" class="logo"></a>
+  <a href=`${linkcontext || "/"}` class="logo"></a>
   <nav>
     <a href="" class="headerlink">FAQ</a>
     <a href="" class="headerlink">Log ind</a>
