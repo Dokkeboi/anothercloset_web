@@ -11,11 +11,11 @@ const data: any[] = await fetch(url, options).then((res) => res.json());
 {
   data.map((item) => (
     <article data-aos="fade-left">
-      <a href={item.itemlink}>
+      <a href={"/items/" + item.slug}>
         <img src={item.image} alt={item.alt} />
       </a>
-      <a href={item.itemlink} class="itemname">
-        {item.itemname}
+      <a href="" class="itemname">
+        {item.name}
       </a>
       <div class="brand">
         {item.size && <p class="itemsize">{item.size}</p>}

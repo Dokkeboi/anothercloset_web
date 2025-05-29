@@ -1,0 +1,98 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  // const response = await fetch('...');
+  // const data = await response.json();
+
+  const url = "https://lzmtfinlowhwlrztjvpr.supabase.co/rest/v1/items";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6bXRmaW5sb3dod2xyenRqdnByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MjMwMTksImV4cCI6MjA2MzM5OTAxOX0.7etoSeq9SdawJ3_h6GNE8OcltmXRj_92v4DWywE8myw";
+
+  const options = { headers: { apikey: key } };
+
+  const data: any[] = await fetch(url, options).then((res) => res.json());
+
+  return data.map((item) => {
+    return {
+      params: { slug: item.slug },
+      props: { item },
+    };
+  });
+}
+
+//const { slug } = Astro.params;
+const { item } = Astro.props;
+---
+
+<Layout>
+  <section>
+    <div class="image">
+      <img src={item.image} alt="" />
+    </div>
+    <div class="content">
+      <h1>{item.name}</h1>
+      <div class="info">
+        <p class="size">{item.size}</p>
+        <p class="subtitle1">{item.brandname}</p>
+      </div>
+      <div class="description">
+        <p>{item.description}</p>
+      </div>
+      <div class="stand">
+        <p class="body1_semibold">Stand:</p>
+        <p>{item.state}</p>
+      </div>
+      <div class="wash">
+        <p class="body1_semibold">Vask:</p>
+        <p>{item.wash}</p>
+      </div>
+      <div class="owner">
+        <p class="body1_semibold">{item.owner && "Ejer: "}</p>
+        <p>{item.owner}</p>
+      </div>
+
+      <div class="closet">
+        <a>{item.closetname}</a>
+      </div>
+    </div>
+  </section>
+  <style>
+    .info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .size {
+      padding: 2%;
+      border-radius: 4px;
+      background-color: var(--a-c-primary-neutral-green-100);
+      color: var(--a-c-pagecol);
+      margin: 0;
+      justify-self: center;
+      place-self: start;
+    }
+
+    .skjul {
+      display: none;
+    }
+
+    div {
+      margin: 33px;
+    }
+
+    img {
+      width: 100%;
+    }
+
+    @media (min-width: 800px) {
+      section {
+        width: 1110px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+  </style>
+</Layout>
