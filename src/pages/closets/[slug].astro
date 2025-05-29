@@ -1,0 +1,48 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+export async function getStaticPaths() {
+  // const response = await fetch('...');
+  // const data = await response.json();
+
+  const url = "https://lzmtfinlowhwlrztjvpr.supabase.co/rest/v1/closets";
+  const key =
+    "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6bXRmaW5sb3dod2xyenRqdnByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MjMwMTksImV4cCI6MjA2MzM5OTAxOX0.7etoSeq9SdawJ3_h6GNE8OcltmXRj_92v4DWywE8myw";
+
+  const options = { headers: { apikey: key } };
+
+  const data: any[] = await fetch(url, options).then((res) => res.json());
+
+  return data.map((info) => {
+    return {
+      params: { slug: info.slug },
+      props: { info },
+    };
+  });
+}
+
+//const { slug } = Astro.params;
+const { info } = Astro.props;
+---
+
+<Layout>
+  <section>
+    <div class="image">
+      <img src={info.image} alt="" />
+    </div>
+    <div class="content">
+      <h1>{info.title}</h1>
+      <p class="body1_semibold">{info.subtitle}</p>
+    </div>
+  </section>
+</Layout>
+
+<style>
+  img {
+    width: 100%;
+  }
+
+  div {
+    margin: 33px;
+  }
+</style>
