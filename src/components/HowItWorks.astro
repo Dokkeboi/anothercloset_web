@@ -121,6 +121,30 @@
     vector-effect: non-scaling-stroke;
   }
 
-  @media (min-width: 800px) {
+  @media (max-width: 800px) {
+    .infinity-loop {
+      display: none;
+    }
+    .graphic {
+      grid-template-areas:
+        "find join"
+        "meet return";
+    }
+
+    .find {
+      grid-area: find;
+    }
+
+    .join {
+      grid-area: join;
+    }
+
+    .meet {
+      grid-area: meet;
+    }
+
+    .return {
+      grid-area: return;
+    }
   }
 </style>
