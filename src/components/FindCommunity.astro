@@ -1,5 +1,13 @@
 ---
 import CTA from "./CTA.astro";
+
+const url = "https://lzmtfinlowhwlrztjvpr.supabase.co/rest/v1/closets";
+const key =
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imx6bXRmaW5sb3dod2xyenRqdnByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDc4MjMwMTksImV4cCI6MjA2MzM5OTAxOX0.7etoSeq9SdawJ3_h6GNE8OcltmXRj_92v4DWywE8myw";
+
+const options = { headers: { apikey: key } };
+
+const data: any[] = await fetch(url, options).then((res) => res.json());
 ---
 
 <div class="hero_section">
@@ -9,15 +17,16 @@ import CTA from "./CTA.astro";
       Hvor bor du?<p>
         <div class="closet_container_parent">
           <div class="closet_container">
-            <a class="box item1" href="">AAU København</a>
-            <a class="box item2" href="">Frederecia</a>
-            <a class="box item3" href="">KEA</a>
-            <a class="box item4" href="">Lyngby</a>
-            <a class="box item5" href="">Nørrebro</a>
-            <a class="box item6" href="">Ribe</a>
-            <a class="box item7" href="">Ringkøbing</a>
-            <a class="box item8" href="">Roskilde</a>
-            <a class="box item9" href="">Tøj til leje</a>
+            <a class="box item1" href="/closets/aau-copenhagen">AAU København</a
+            >
+            <a class="box item2" href="/closets/fredericia">Frederecia</a>
+            <a class="box item3" href="/closets/kea">KEA</a>
+            <a class="box item4" href="/closets/lyngby">Lyngby</a>
+            <a class="box item5" href="/closets/norrebro">Nørrebro</a>
+            <a class="box item6" href="/closets/ribe">Ribe</a>
+            <a class="box item7" href="/closets/ringkobing">Ringkøbing</a>
+            <a class="box item8" href="/closets/roskilde">Roskilde</a>
+            <a class="box item9" href="/closets/toj-til-leje">Tøj til leje</a>
           </div>
         </div>
       </p>
