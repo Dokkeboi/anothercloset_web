@@ -14,7 +14,7 @@ const data: any[] = await fetch(url, options).then((res) => res.json());
       <a href={"/items/" + item.slug}>
         <img src={item.image} alt={item.alt} />
       </a>
-      <a href="" class="itemname">
+      <a href={"/items/" + item.slug} class="itemname">
         {item.name}
       </a>
       <div class="brand">
@@ -24,7 +24,7 @@ const data: any[] = await fetch(url, options).then((res) => res.json());
           {item.brandname}
         </p>
       </div>
-      <a href="${closetlink}`" class="closetlink">
+      <a href={"/closets/" + item.link} class="closetlink">
         {item.closetname}
       </a>
     </article>
