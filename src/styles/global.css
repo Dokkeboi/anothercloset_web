@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 /* Designsystem: */
 :root {
   /* Color styles */
@@ -170,13 +174,14 @@ a.cta-large {
 a.cta-small:hover,
 a.cta-medium:hover,
 a.cta-large:hover {
-  background-color: transparent;
+  background-color: var(--a-c-pagecol);
   border-color: var(--a-c-primary-neutral-green-100);
 }
 /*Mangler endu pressed states for CTA'er*/
 
 body {
   background-color: var(--a-c-pagecol);
+  overflow-x: hidden;
 }
 
 header {
@@ -196,5 +201,11 @@ html {
   main {
     margin: 10%;
     margin-top: calc(10% + var(--headerheight));
+  }
+}
+@media (max-width: 800px) {
+  h1 {
+    font-size: 3rem;
+    line-height: 3.5rem;
   }
 }
