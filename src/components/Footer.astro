@@ -5,17 +5,23 @@ const { linkcontext } = Astro.props;
 <footer>
   <div class="left">
     <p><b>Mere info:</b></p>
-    <a href="#">Sådan fungerer another closet</a>
-    <a href="mission">Vores mission</a>
-    <a href="faq">FAQ</a>
+    <a href=`${linkcontext || ""}about`>Sådan fungerer another closet</a>
+    <a href=`${linkcontext || ""}mission`>Vores mission</a>
+    <a href=`${linkcontext || ""}faq`>FAQ</a>
     <p><b>Det med småt:</b></p>
-    <a href="#">Handelsbetingelser</a>
-    <a href="#">Cookies - og privatlivspolitik</a>
-    <a href="faq">FAQ</a>
+    <a href=`${linkcontext || ""}handelsbetingelser`>Handelsbetingelser</a>
+    <a href=`${linkcontext || ""}cookies`>Cookies - og privatlivspolitik</a>
+    <a href=`${linkcontext || ""}faq`>FAQ</a>
     <p><b>Kontakt:</b></p>
-    <a href="mailto:hej@anothercloset.dk">hej@anothercloset.dk</a>
+    <a target="_blank" href="mailto:hej@anothercloset.dk"
+      >hej@anothercloset.dk</a
+    >
     <p><b>Adresse:</b></p>
-    <a href="#">Tønbergsvejl 104 - 4000 Roskilde</a>
+    <a
+      target="_blank"
+      href="https://www.google.com/maps/search/Tønbergsvejl+104+-+4000+Roskilde/@55.694149,12.1012646,17z/data=!3m1!4b1?entry=ttu&g_ep=EgoyMDI1MDUyNy4wIKXMDSoASAFQAw%3D%3D"
+      >Tønbergsvejl 104 - 4000 Roskilde</a
+    >
   </div>
   <div class="right">
     <a href="" class="some-logo insta"></a>
