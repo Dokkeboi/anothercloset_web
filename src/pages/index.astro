@@ -31,7 +31,19 @@ import Memberfavsection from "../components/Memberfavsection.astro";
     <HowItWorks />
     <div class="midspacer"></div>
     <Memberfavsection />
-    <section class="thildequote"></section>
+    <section class="lottequote">
+      <div class="lottequote-img-container"></div>
+      <div class="lottecitat">
+        <p>
+          “For mig er det en del af et overordnet livsvalg, der handler om at
+          arbejde mindre, bo mindre og forbruge mindre. Another Closet bliver en
+          mulighed for at lege og eksperimentere med tøj i et sjovt, rummeligt
+          og bæredygtigt fællesskab uden at skulle løbe rundt i tilværelsen for
+          at have penge nok til det hele.”
+        </p>
+        <p><b>- Lotte, Medlem Roskilde </b></p>
+      </div>
+    </section>
   </main>
 </Layout>
 <style>
@@ -48,7 +60,7 @@ import Memberfavsection from "../components/Memberfavsection.astro";
         rgba(255, 0, 0, 0) 40.87%,
         rgba(255, 0, 0, 0.15) 100%
       ),
-      url(../assets/images/achero.webp) lightgray 50% / cover no-repeat;
+      url(/images/achero.webp) lightgray 50% / cover no-repeat;
 
     background-size: cover;
     display: grid;
@@ -86,6 +98,32 @@ import Memberfavsection from "../components/Memberfavsection.astro";
   .midspacer {
     height: 20vh;
   }
+
+  section.lottequote {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .lottequote-img-container {
+    height: 100%;
+    width: 50vw;
+    position: absolute;
+    transform: translateX(-21%);
+    overflow: hidden;
+    z-index: -1;
+    background-image: url(/images/lottequote.webp);
+    background-position: center;
+    background-size: cover;
+  }
+  .lottecitat {
+    padding: 10%;
+    grid-column: 2;
+    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
   @media (max-width: 800px) {
     .hero-card-spacer {
       grid-column: span 2;
@@ -103,6 +141,30 @@ import Memberfavsection from "../components/Memberfavsection.astro";
     }
     .midspacer {
       height: 30vh;
+    }
+    section.lottequote {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .lottequote-img-container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      transform: none;
+      transform: scale(80%);
+      overflow: hidden;
+      z-index: 0;
+      background-image: url(/images/lottequote.webp);
+      background-position: center;
+      background-size: cover;
+      border-radius: 20px;
+      border: 2px solid var(--a-c-primary-neutral-green-100);
+      box-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
+    }
+
+    .lottecitat {
+      grid-row: 2;
     }
   }
 </style>
