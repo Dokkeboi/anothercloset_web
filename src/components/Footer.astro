@@ -1,0 +1,94 @@
+---
+
+---
+
+<footer>
+  <div class="left">
+    <p><b>Mere info:</b></p>
+    <a href="#">Sådan fungerer another closet</a>
+    <a href="mission">Vores mission</a>
+    <a href="faq">FAQ</a>
+    <p><b>Det med småt:</b></p>
+    <a href="#">Handelsbetingelser</a>
+    <a href="#">Cookies - og privatlivspolitik</a>
+    <a href="faq">FAQ</a>
+    <p><b>Kontakt:</b></p>
+    <a href="mailto:hej@anothercloset.dk">hej@anothercloset.dk</a>
+    <p><b>Adresse:</b></p>
+    <a href="#">Tønbergsvejl 104 - 4000 Roskilde</a>
+  </div>
+  <div class="right">
+    <a href="" class="some-logo insta"></a>
+    <a href="" class="some-logo fb"></a>
+
+    <a href="/" class="footerlogo"></a>
+    <p class="copyright">© 2023 Another Closet</p>
+  </div>
+</footer>
+
+<style>
+  footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: var(--a-c-primary-green-100);
+    padding: 2%;
+    box-sizing: border-box;
+  }
+  footer > div {
+    display: flex;
+    flex-direction: column;
+  }
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  footer a,
+  footer p {
+    color: var(--a-c-pagecol);
+  }
+
+  p.copyright {
+    font-family: "Inclusive Sans", sans-serif;
+  }
+  a.some-logo {
+    background-color: var(--a-c-pagecol);
+
+    width: 13vh;
+    aspect-ratio: 1/1;
+    transform: scale(60%);
+  }
+
+  a.footerlogo {
+    mask-image: url(../assets/logo/small.webp);
+    mask-size: contain;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: var(--a-c-pagecol);
+    height: 10vh;
+    transform: scale(80%);
+    aspect-ratio: 2/1;
+  }
+
+  a.insta {
+    mask-image: url(../assets/some-logos/Instagram_Glyph_Black.svg);
+    mask-size: contain;
+  }
+  a.fb {
+    mask-image: url(../assets/some-logos/Facebook_Logo_Secondary.png);
+    mask-size: contain;
+  }
+  @media (min-width: 800px) {
+    a.footerlogo {
+      transition: scale(100%);
+    }
+    a.some-logo {
+      background-color: var(--a-c-pagecol);
+
+      width: 13vh;
+      aspect-ratio: 1/1;
+      transform: scale(80%);
+    }
+  }
+</style>
