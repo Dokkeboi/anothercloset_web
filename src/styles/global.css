@@ -55,7 +55,9 @@ html {
 /*Text-styles:*/
 p,
 a,
-li {
+li,
+input,
+label {
   font-family: "Lexend", sans-serif;
 }
 

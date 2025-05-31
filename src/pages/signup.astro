@@ -1,5 +1,67 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Login from "../components/Login.astro";
 ---
 
-<Layout> <h1></h1> </Layout>
+<Layout titel="Tilmeld dig!">
+  <main>
+    <h1>Bliv medlem</h1>
+    <p><b>For kun 149 kr. om måneden kan du:</b></p>
+    <ul>
+      <li>Låne 3 nye stykker tøj hver måned</li>
+      <li>Spare tid og penge</li>
+      <li>
+        Eksperimentere med din stil og prøve nye farver, brands og designs
+      </li>
+      <li>
+        Deltage i eksklusive tøjbytte-saloner med adgang til lækkert tøj fra
+        dine favorit brands
+      </li>
+      <li>Lade andre medlemmer låne det tøj, du ikke selv bruger</li>
+      <li>Være fuldt dækket af forsikring - både når du låner og låner ud</li>
+    </ul>
+    <p>
+      Medlemskabet er uden binding!<br />
+      Som medlem af Another Closet bliver du en del af et fællesskab, der sammen
+      bekæmper overforbrug og tøjspild. Ved at dele, forlænger vi tøjets levetid
+      og udnytter jordens ressourcer bedre. Tak fordi du er med til at revolutionere
+      måden, vi tænker og forbruger tøj og mode på - én smuk kjole ad gangen.
+    </p>
+    <section class="loginholder">
+      <Login isSignup="true" />
+    </section>
+  </main>
+
+  <style>
+    h1 {
+      margin-bottom: 5%;
+    }
+
+    p,
+    ul {
+      margin-bottom: 2%;
+    }
+    li {
+      margin-bottom: 0.5%;
+    }
+
+    b {
+      color: var(--a-c-primary-neutral-green-100);
+    }
+
+    section.loginholder {
+      display: block;
+    }
+    @media (min-width: 800px) {
+      main {
+        margin: 10%;
+        margin-top: calc(10% + var(--headerheight));
+      }
+      section.loginholder {
+        margin: 5%;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+      }
+    }
+  </style></Layout
+>

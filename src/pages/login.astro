@@ -1,7 +1,46 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Login from "../components/Login.astro";
 ---
 
-<Layout>
-  <h1></h1>
-</Layout>
+<Layout titel="Log ind">
+  <main>
+    <h1>Log ind</h1>
+    <section class="loginholder">
+      <Login />
+    </section>
+  </main>
+
+  <style>
+    h1 {
+      margin-bottom: 5%;
+    }
+
+    p,
+    ul {
+      margin-bottom: 2%;
+    }
+    li {
+      margin-bottom: 0.5%;
+    }
+
+    b {
+      color: var(--a-c-primary-neutral-green-100);
+    }
+
+    section.loginholder {
+      display: block;
+    }
+    @media (min-width: 800px) {
+      main {
+        margin: 10%;
+        margin-top: calc(10% + var(--headerheight));
+      }
+      section.loginholder {
+        margin: 5%;
+        display: grid;
+        grid-template-columns: 1fr 4fr 1fr;
+      }
+    }
+  </style></Layout
+>
