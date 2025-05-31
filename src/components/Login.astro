@@ -1,0 +1,204 @@
+---
+const { isSignup } = Astro.props;
+---
+
+<article>
+  <div class="tabheader">
+    <div class=`tab login ${isSignup || "active"}` id="logintab">
+      <p>Log ind</p>
+    </div>
+    <div class=`tab signup ${isSignup && "active"}` id="signuptab">
+      <p>Tilmed dig</p>
+    </div>
+  </div>
+  <div class=`page login ${isSignup || "active"}`>
+    <p class="tabtitle">Log ind:</p>
+    <p class="fieldtitle">Email:</p>
+    <div class="textfield">
+      <input type="text" placeholder="Indtast din Email" />
+    </div>
+    <p class="fieldtitle">Adgangskode:</p>
+    <div class="textfield">
+      <input type="text" placeholder="Indtast din adgangskode" />
+      <div class="material-symbols-rounded">visibility</div>
+    </div>
+    <a href="#" class="cta-small">Log ind</a>
+  </div>
+  <div class=`page signup ${isSignup && "active"}`>
+    <p class="tabtitle">Opret ny bruger i Another closet</p>
+    <p class="fieldtitle">Fornavn:</p>
+    <div class="textfield">
+      <input type="text" placeholder="Fornavn" />
+    </div>
+    <p class="fieldtitle">Efternavn:</p>
+    <div class="textfield">
+      <input type="text" placeholder="Efternavn" />
+    </div>
+    <p class="fieldtitle">Email:</p>
+    <div class="textfield">
+      <input type="text" placeholder="Indtast din Email" />
+    </div>
+    <p class="fieldtitle">Adgangskode:</p>
+    <div class="textfield">
+      <input type="text" placeholder="Indtast din adgangskode" />
+      <div class="material-symbols-rounded">visibility</div>
+    </div>
+    <p class="fieldtitle">Bekræft din adgangskode:</p>
+    <div class="textfield">
+      <input type="text" placeholder="Bekræft din adgangskode" />
+      <div class="material-symbols-rounded">visibility</div>
+    </div>
+    <p class="disclaimer">
+      *Før du opretter dig som bruger, skal du acceptere handelsbetingelserne &
+      privatlivspolitikken. Du kan læse mere her: <a
+        href="handelsbetingelser"
+        target="_blank">Handelsbetingelser - Privatlivspolitik</a
+      >
+    </p>
+    <label>
+      <input type="checkbox" name="accept-privacy-policy" />
+      Jeg accepterer handelsbetingelserne & privatlivspolitikken<br />
+    </label>
+    <p class="disclaimer">*Du skal acceptere vilkår og betingelser</p>
+    <label>
+      <input type="checkbox" name="accept-marketing" />
+      Ja tak, jeg vil gerne modtage medlemsmails og andet relevant markedsføring<br
+      />
+    </label>
+    <a href="#" class="cta-small">Opret bruger</a>
+  </div>
+</article>
+<style>
+  .tabheader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: #ffe3b0;
+  }
+
+  .tab > p {
+    text-align: center;
+  }
+
+  p.tabtitle {
+    font-family: Inter;
+    font-size: 2rem;
+    text-align: center;
+    color: var(--a-c-primary-neutral-green-100);
+  }
+  p.disclaimer,
+  p.fieldtitle {
+    font-family: Inter;
+    color: var(--a-c-secondary-red-60);
+    margin-left: 0.5%;
+  }
+  p.disclaimer {
+    color: var(--a-c-primary-neutral-green-100);
+    text-align: center;
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  p.disclaimer,
+  label {
+    margin: 2%;
+  }
+
+  .tab {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 4%;
+    height: 100%;
+    width: 100%;
+    cursor: pointer;
+  }
+
+  .tab.active {
+    background-color: var(--a-c-pagecol);
+    /* filter: drop-shadow(-1px 4px 11.8px rgba(0, 0, 0, 0.46)); */
+    /* box-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46); */
+  }
+  article {
+    overflow: hidden;
+    grid-column: 2;
+
+    /* padding: 5%; */
+    /* width: 100%; */
+
+    background-color: var(--a-c-pagecol);
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 0;
+    border-radius: 20px;
+    border: 1px solid var(--a-c-primary-neutral-green-100);
+    background-color: var(--a-c-pagecol;);
+    box-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
+  }
+
+  .page {
+    padding: 5%;
+    display: none;
+  }
+
+  .page.active {
+    display: block;
+  }
+
+  .textfield {
+    margin-top: 0.5%;
+    background-color: white;
+    width: 100%;
+    padding: 1%;
+    border-radius: 20px;
+    display: flex;
+    border: 1px solid var(--a-c-primary-neutral-green-100);
+    margin-bottom: 2%;
+  }
+
+  .textfield input {
+    background-color: transparent;
+    border-style: none;
+    font-size: 1rem;
+    flex-grow: 1;
+  }
+  .textfield input:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  .textfield .material-symbols-rounded {
+    aspect-ratio: 1/1;
+    height: 100%;
+    color: var(--a-c-primary-neutral-green-100);
+    -ms-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
+    cursor: pointer;
+  }
+  a.cta-small {
+    box-sizing: border-box;
+    display: block;
+    width: 100%;
+    margin-top: 5%;
+  }
+</style>
+
+<script is:client>
+  const logintab = document.querySelector("#logintab");
+  const signuptab = document.querySelector("#signuptab");
+  const loginPage = document.querySelector(".page.login");
+  const signupPage = document.querySelector(".page.signup");
+
+  logintab?.addEventListener("click", () => {
+    logintab.classList.add("active");
+    signuptab.classList.remove("active");
+    loginPage.classList.add("active");
+    signupPage.classList.remove("active");
+  });
+
+  signuptab?.addEventListener("click", () => {
+    signuptab.classList.add("active");
+    logintab.classList.remove("active");
+    signupPage.classList.add("active");
+    loginPage.classList.remove("active");
+  });
+</script>

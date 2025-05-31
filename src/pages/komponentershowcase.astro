@@ -4,6 +4,7 @@ import Layout from "../layouts/Layout.astro";
 import Productcard from "../components/Productcard.astro";
 import Infocard from "../components/Infocard.astro";
 import Memberfavsection from "../components/Memberfavsection.astro";
+import HowItWorks from "../components/HowItWorks.astro";
 ---
 
 <Layout titel="Komponenter">
@@ -41,28 +42,29 @@ import Memberfavsection from "../components/Memberfavsection.astro";
       <a href="#" class="cta-large">Large</a>
     </div>
     <Memberfavsection sectiontitle="Medlemmers favoritter" />
-  </main>
-  <style>
-    .cardshowcase {
-      width: 100%;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 5px;
-    }
-    .ctas {
-      width: 70%;
-      margin-left: 15%;
-      flex-direction: column;
-      display: flex;
-    }
-    @media (min-width: 800px) {
+    <HowItWorks />
+    <style>
       .cardshowcase {
-        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 5px;
       }
       .ctas {
-        width: 50%;
-        margin-left: 25%;
+        width: 70%;
+        margin-left: 15%;
+        flex-direction: column;
+        display: flex;
       }
-    }
-  </style>
+      @media (min-width: 800px) {
+        .cardshowcase {
+          grid-template-columns: 1fr 1fr 1fr 1fr;
+        }
+        .ctas {
+          width: 50%;
+          margin-left: 25%;
+        }
+      }
+    </style>
+  </main>
 </Layout>

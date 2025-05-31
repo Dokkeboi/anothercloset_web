@@ -1,12 +1,170 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import HowItWorks from "../components/HowItWorks.astro";
+import Infocard from "../components/Infocard.astro";
+import Memberfavsection from "../components/Memberfavsection.astro";
 ---
 
 <Layout titel="index">
-  <main>
+  <!--   <main>
     <h1 data-aos="fade-in" data-aos-delay="300">Astro</h1>
-    <!-- AOS Installeret! For dokumentation, se: https://michalsnik.github.io/aos/ -->
     <p>test</p>
     <a href="komponentershowcase">Komponenter - Magnus</a>
+  </main> -->
+  <main>
+    <section class="hero" data-aos="fade-in" data-aos-duration="1500">
+      <div class="hero-card-spacer">
+        <Infocard
+          cardtitle="Velkommen til Another Closet!"
+          cardsubtitle=`Dele-tøj på abonnement!`
+          cardtext="Lån 3 unikke stykker tøj hver måned for kun 149 kr."
+          cardcta="Find dit tøjfællesskab!"
+          cardlink="getstarted"
+        />
+        <a href="#howitworks" class="cta-small explore"
+          >Læs mere<span class="material-symbols-rounded">chevron_right</span
+          ></a
+        >
+      </div>
+    </section>
+    <div class="herospacer"></div>
+    <HowItWorks />
+    <div class="midspacer"></div>
+    <Memberfavsection />
+    <section class="lottequote">
+      <div class="lottequote-img-container"></div>
+      <div class="lottecitat">
+        <p>
+          “For mig er det en del af et overordnet livsvalg, der handler om at
+          arbejde mindre, bo mindre og forbruge mindre. Another Closet bliver en
+          mulighed for at lege og eksperimentere med tøj i et sjovt, rummeligt
+          og bæredygtigt fællesskab uden at skulle løbe rundt i tilværelsen for
+          at have penge nok til det hele.”
+        </p>
+        <p><b>- Lotte, Medlem Roskilde </b></p>
+      </div>
+    </section>
   </main>
 </Layout>
+<style>
+  section.hero {
+    position: absolute;
+    /* top: var(--headerheight); */
+    top: 0;
+    right: 0;
+    width: 100vw;
+    height: 100vh;
+    background:
+      radial-gradient(
+        22.02% 50% at 50% 50%,
+        rgba(255, 0, 0, 0) 40.87%,
+        rgba(255, 0, 0, 0.15) 100%
+      ),
+      url(/images/achero.webp) lightgray 50% / cover no-repeat;
+
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero-card-spacer {
+    grid-column: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20%;
+    padding-top: 50%;
+    padding-left: 20%;
+
+    z-index: 1;
+  }
+
+  a.explore {
+    position: absolute;
+    bottom: 5%;
+    right: 45vw;
+  }
+  a.explore > span {
+    vertical-align: middle;
+    transition: 300ms;
+  }
+
+  a.explore:hover > span {
+    transform: rotate(90deg);
+  }
+
+  .herospacer {
+    height: 70vh;
+  }
+  .midspacer {
+    height: 20vh;
+  }
+
+  section.lottequote {
+    height: 50vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .lottequote-img-container {
+    height: 100%;
+    width: 50vw;
+    position: absolute;
+    transform: translateX(-21%);
+    overflow: hidden;
+    z-index: -1;
+    background-image: url(/images/lottequote.webp);
+    background-position: center;
+    background-size: cover;
+  }
+  .lottecitat {
+    padding: 10%;
+    grid-column: 2;
+    gap: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  @media (max-width: 800px) {
+    .hero-card-spacer {
+      grid-column: span 2;
+      padding: 2%;
+    }
+    a.explore {
+      position: absolute;
+      bottom: 5%;
+      right: 25vw;
+      padding-left: 10%;
+      padding-right: 10%;
+    }
+    .herospacer {
+      height: 90vh;
+    }
+    .midspacer {
+      height: 30vh;
+    }
+    section.lottequote {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .lottequote-img-container {
+      height: 100%;
+      width: 100%;
+      position: relative;
+      transform: none;
+      transform: scale(80%);
+      overflow: hidden;
+      z-index: 0;
+      background-image: url(/images/lottequote.webp);
+      background-position: center;
+      background-size: cover;
+      border-radius: 20px;
+      border: 2px solid var(--a-c-primary-neutral-green-100);
+      box-shadow: -1px 4px 11.800000190734863px rgba(0, 0, 0, 0.46);
+    }
+
+    .lottecitat {
+      grid-row: 2;
+    }
+  }
+</style>
